@@ -3,11 +3,10 @@ import DISHES from '../../data/dishes.js';
 import MenuItem from './MenuItem';
 import DishDetail from './DishDetail';
 
-
 class Menu extends Component {
     state = {
         dishes: DISHES,
-        selectedDish: null
+        selectedDish: null,
     }
 
     onDishSelect = dish => {
