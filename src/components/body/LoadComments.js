@@ -6,7 +6,7 @@ const LoadComments = props => {
         props.comments.map(comment => {
             return (
                 <div key={comment.id}>
-                    <h5>{comment.author}</h5>
+                    <h6>{comment.author}</h6>
                     <p>{comment.comment}</p>
                     <p>{dateFormat(comment.date, "dddd, mmmm dS, yyyy, h:MM TT")}</p>
                 </div>
