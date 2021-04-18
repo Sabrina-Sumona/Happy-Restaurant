@@ -28,16 +28,16 @@ class Navigation extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="mr-auto" navbar>
                                 <NavItem>
-                                    <Link to="/" className="nav-link active" exact>Home</Link>
+                                    <Link exact="true" to="/" className="nav-link active">Home</Link>
                                 </NavItem>
                                 <NavItem>
-                                    <Link to="/menu" className="nav-link" exact>Menu</Link>
+                                    <Link exact="true" to="/menu" className="nav-link">Menu</Link>
                                 </NavItem>
                                 <NavItem>
-                                    <Link to="/about" className="nav-link" exact>About</Link>
+                                    <Link exact="true" to="/about" className="nav-link">About</Link>
                                 </NavItem>
                                 <NavItem>
-                                    <Link to="/contact" className="nav-link" exact>Contact</Link>
+                                    <Link exact="true" to="/contact" className="nav-link">Contact</Link>
                                 </NavItem>
                             </Nav>
                         </Collapse>
