@@ -15,7 +15,7 @@ const DishDetail = props => {
                 <CardBody>
                     <CardTitle style={{ fontWeight: "bold", textAlign: "center" }}>Comments</CardTitle>
                     <hr />
-                    <LoadComments style={{ textAlign: "left" }} comments={props.dish.comments} />
+                    <LoadComments style={{ textAlign: "left" }} comments={props.comments} />
                 </CardBody>
             </Card>
         </div>
