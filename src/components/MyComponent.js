@@ -90,3 +90,7 @@
     </div>
 </div> */}
 
+// we can't use directly timeout when action dispatch, for that the 3rdd function is used
+// normal redux only support an obj into the dispatch
+// but thunk allows redux to use a dispatch into another dispatch
+

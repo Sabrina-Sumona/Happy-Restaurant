@@ -20,11 +20,9 @@ export const dishesloading = () => ({
     type: actionTypes.DISHES_LOADING
 })
 
-export const fetchDishes = () => {
-    return dispatch => {
-        dispatch(dishesloading());
-        setTimeout(() => {
-            dispatch(loadDishes(DISHES))
-        }, 500);
-    }
+export const fetchDishes = () => dispatch => {
+    dispatch(dishesloading());
+    setTimeout(() => {
+        dispatch(loadDishes(DISHES))
+    }, 500);
 }

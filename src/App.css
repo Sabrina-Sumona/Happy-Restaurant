@@ -30,3 +30,12 @@
   Align-Items: center;
   Justify-Content: centre;
 }
+
+.card-title{
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  padding: 2px;
+  background-color: #343A40;
+  border-radius: 5px;
+}
