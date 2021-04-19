@@ -4,7 +4,10 @@ import { combineReducers } from 'redux';
 import * as actionTypes from './actionTypes';
 
 const dishReducer = (dishState = DISHES, action) => {
-    return dishState;
+    switch (action.type) {
+        default:
+            return dishState;
+    }
 }
 
 const commentReducer = (commentState = COMMENTS, action) => {
@@ -18,9 +21,14 @@ const commentReducer = (commentState = COMMENTS, action) => {
         default:
             return commentState;
     }
+
+
 }
 
 export const Reducer = combineReducers({
     dishes: dishReducer,
     comments: commentReducer
 });
+
+
+

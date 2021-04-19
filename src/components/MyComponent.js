@@ -34,6 +34,9 @@
 // export default connect()(CommentForm);
 // export default connect(null, mapDispatchToProps)(CommentForm);
 
+// // must be uppercase
+// type: 'ADD_COMMENT',
+
 // const initialState = {
 //     dishes: DISHES,
 //     comments: COMMENTS,
@@ -64,3 +67,26 @@
 //     }
 //     return state;
 // }
+
+// // to all dispatch together outside of the component
+// const mapDispatchToProps = dispatch => {
+//     return {
+//         addComment: (dishId, rating, author, comment) => dispatch(
+//         )
+//     }
+//     // we can use more dispath here
+//     // delete Comment: (dishId, rating, author, comment) =>     dispatch({
+//     //     ......
+//     //  })
+//     // }
+// }
+
+{/* <div className="row">
+    <div className="col-6">
+        {menu}
+    </div>
+    <div className="col-6">
+        {dishDetail}
+    </div>
+</div> */}
+
