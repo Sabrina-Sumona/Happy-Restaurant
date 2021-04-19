@@ -17,3 +17,8 @@
   padding: 50px 0px 50px 0px;
   min-height: 400px;
 }
+
+#button{
+  display: flex;
+  justify-content: flex-end;
+}

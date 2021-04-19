@@ -2,8 +2,10 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className="col-12" style={{ padding: "60px" }}>
-            <span className="fa fa-spinner fa-5x text-primary fa-fw fa-pulse"></span>
+        <div className="col-12 text-primary " style={{ padding: "60px" }}>
+            Coming
+            <span className="fa fa-spinner fa-2x fa-fw fa-pulse"></span>
+                    soon
         </div>
     )
 }

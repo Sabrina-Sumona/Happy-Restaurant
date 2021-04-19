@@ -159,6 +159,86 @@ const COMMENTS =
             comment: "It's your birthday, we're gonna party!",
             author: "Sagor",
             date: "2020-11-16T17:57:28.556094Z"
+        },
+        {
+            dishId: 4,
+            id: 20,
+            rating: 5,
+            comment: "Imagine all the eatables, living in conFusion!",
+            author: "Shanta",
+            date: "2021-04-16T17:57:28.556094Z"
+        },
+        {
+            dishId: 4,
+            id: 21,
+            rating: 4,
+            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+            author: "Kona",
+            date: "2021-03-05T17:57:28.556094Z"
+        },
+        {
+            dishId: 4,
+            id: 22,
+            rating: 3,
+            comment: "Eat it, just eat it!",
+            author: "Minu",
+            date: "2021-02-13T17:57:28.556094Z"
+        },
+        {
+            dishId: 4,
+            id: 23,
+            rating: 4,
+            comment: "Ultimate, Reaching for the stars!",
+            author: "Rifat",
+            date: "2021-01-02T17:57:28.556094Z"
+        },
+        {
+            dishId: 4,
+            id: 24,
+            rating: 2,
+            comment: "It's your birthday, we're gonna party!",
+            author: "Nova",
+            date: "2020-12-02T17:57:28.556094Z"
+        },
+        {
+            dishId: 5,
+            id: 25,
+            rating: 5,
+            comment: "Imagine all the eatables, living in conFusion!",
+            author: "Tumpa",
+            date: "2021-04-16T17:57:28.556094Z"
+        },
+        {
+            dishId: 5,
+            id: 26,
+            rating: 4,
+            comment: "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+            author: "Kona",
+            date: "2021-04-05T17:57:28.556094Z"
+        },
+        {
+            dishId: 5,
+            id: 27,
+            rating: 3,
+            comment: "Eat it, just eat it!",
+            author: "Mona",
+            date: "2021-02-13T17:57:28.556094Z"
+        },
+        {
+            dishId: 5,
+            id: 28,
+            rating: 4,
+            comment: "Ultimate, Reaching for the stars!",
+            author: "Gourab",
+            date: "2020-12-02T17:57:28.556094Z"
+        },
+        {
+            dishId: 5,
+            id: 29,
+            rating: 2,
+            comment: "It's your birthday, we're gonna party!",
+            author: "Sagor",
+            date: "2020-11-16T17:57:28.556094Z"
         }
 
     ];

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
 import DishDetail from './DishDetail';
-import { CardColumns, Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
+import { CardColumns, Modal, ModalBody, ModalHeader, Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addComment } from '../../redux/actionCreators';
 import Loading from './Loading';
@@ -63,26 +63,22 @@ class Menu extends Component {
         }
         return (
             <div className="container">
-                <div className="row">
+                <div className="row" style={{ textAlign: "right" }}>
                     <CardColumns>
                         {menu}
                     </CardColumns>
                     <Modal isOpen={this.state.modalOpen}>
+                        <ModalHeader id='button'>
+                            <Button color="primary" onClick={this.toggleModal}>
+                                X
+                            </Button>
+                        </ModalHeader>
                         <ModalBody>
                             {dishDetail}
                         </ModalBody>
-                        <ModalFooter>
-                            <Button color="secondary" onClick={this.toggleModal}>
-                                Exit
-                            </Button>
-                        </ModalFooter>
                     </Modal>
                 </div>
-                <div className="col-12 text-primary " style={{ padding: "60px" }}>
-                    Coming
-                    <span className="fa fa-spinner fa-2x fa-fw fa-pulse"></span>
-                    soon
-                </div>
+                <Loading />
             </div >
         );
     }

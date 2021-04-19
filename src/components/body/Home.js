@@ -6,6 +6,7 @@ class Home extends Component {
         document.title = "Happy Restaurant";
         return (
             <div>
+
             </div>
         );
     }
