@@ -16,7 +16,7 @@ const DishDetail = props => {
                 <CardBody>
                     <CardTitle style={{ fontWeight: "bold", textAlign: "center" }}>Comments</CardTitle>
                     <hr />
-                    <LoadComments style={{ textAlign: "left" }} comments={props.comments} />
+                    <LoadComments style={{ textAlign: "left" }} comments={props.comments} addComment={props.addComment} />
                     <hr />
                     <CommentForm dishId={props.dish.id} />
                 </CardBody>

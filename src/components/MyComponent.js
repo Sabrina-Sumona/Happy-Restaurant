@@ -30,3 +30,6 @@
 // }
 
 // export default connect(mapStateToProps)(Home);
+
+// export default connect()(CommentForm);
+// export default connect(null, mapDispatchToProps)(CommentForm);

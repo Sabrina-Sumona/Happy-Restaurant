@@ -2,27 +2,6 @@ import React, { Component } from 'react';
 import { Form, Button, Input } from 'reactstrap';
 import { connect } from 'react-redux';
 
-// to all dispatch together outside of the component
-const mapDispatchToProps = dispatch => {
-    return {
-        addComment: (dishId, rating, author, comment) => dispatch({
-            // must be uppercase
-            type: 'ADD_COMMENT',
-            payload: {
-                dishId: dishId,
-                author: author,
-                rating: rating,
-                comment: comment
-            }
-        })
-    }
-    // we can use more dispath here
-    // delete Comment: (dishId, rating, author, comment) =>     dispatch({
-    //     ......
-    //  })
-    // }
-}
-
 class CommentForm extends Component {
     constructor(props) {
         super(props);
@@ -95,8 +74,4 @@ class CommentForm extends Component {
     }
 }
 
-// connect has 2 parameters: 1.mapStateToProps, 2.mapDispatchToProps
-export default connect(null, mapDispatchToProps)(CommentForm);
-
-// export default CommentForm;
-// export default connect()(CommentForm);
+export default CommentForm;

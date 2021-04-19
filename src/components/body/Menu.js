@@ -13,6 +13,27 @@ const mapStateToProps = state => {
     }
 }
 
+// to all dispatch together outside of the component
+const mapDispatchToProps = dispatch => {
+    return {
+        addComment: (dishId, rating, author, comment) => dispatch({
+            // must be uppercase
+            type: 'ADD_COMMENT',
+            payload: {
+                dishId: dishId,
+                author: author,
+                rating: rating,
+                comment: comment
+            }
+        })
+    }
+    // we can use more dispath here
+    // delete Comment: (dishId, rating, author, comment) =>     dispatch({
+    //     ......
+    //  })
+    // }
+}
+
 class Menu extends Component {
     state = {
         // dishes: DISHES,
@@ -55,7 +76,11 @@ class Menu extends Component {
             const comments = this.props.comments.filter(comment =>
                 comment.dishId === this.state.selectedDish.id
             )
-            dishDetail = <DishDetail dish={this.state.selectedDish} comments={comments} />
+            dishDetail = <DishDetail
+                dish={this.state.selectedDish}
+                comments={comments}
+                addComment={this.props.addComment}
+            />
         }
         return (
             <div className="container">
@@ -86,4 +111,5 @@ class Menu extends Component {
 }
 
 // export default Menu;
-export default connect(mapStateToProps)(Menu);
+// connect has 2 parameters: 1.mapStateToProps, 2.mapDispatchToProps
+export default connect(mapStateToProps, mapDispatchToProps)(Menu);
