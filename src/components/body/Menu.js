@@ -69,7 +69,7 @@ class Menu extends Component {
                     {/*<div className="col-6">
                         {dishDetail}
                     </div> */}
-                    <Modal isOpen={this.state.modalOpen} onClick={this.toggleModal} >
+                    <Modal isOpen={this.state.modalOpen}>
                         <ModalBody>
                             {dishDetail}
                         </ModalBody>
