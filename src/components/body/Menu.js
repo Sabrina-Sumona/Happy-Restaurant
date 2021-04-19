@@ -4,6 +4,7 @@ import DishDetail from './DishDetail';
 import { CardColumns, Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addComment } from '../../redux/actionCreators';
+import Loading from './Loading';
 
 const mapStateToProps = state => {
     return {
@@ -72,12 +73,17 @@ class Menu extends Component {
                         </ModalBody>
                         <ModalFooter>
                             <Button color="secondary" onClick={this.toggleModal}>
-                                Close
+                                Exit
                             </Button>
                         </ModalFooter>
                     </Modal>
                 </div>
-            </div>
+                <div className="col-12 text-primary " style={{ padding: "60px" }}>
+                    Coming
+                    <span className="fa fa-spinner fa-2x fa-fw fa-pulse"></span>
+                    soon
+                </div>
+            </div >
         );
     }
 }
