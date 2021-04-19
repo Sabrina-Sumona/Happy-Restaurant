@@ -5,6 +5,7 @@ import DishDetail from './DishDetail';
 import { CardColumns, Modal, ModalBody, ModalFooter, Button } from 'reactstrap';
 // import COMMENTS from '../../data/comments.js';
 import { connect } from 'react-redux';
+import * as actionTypes from '../../redux/actionTypes';
 
 const mapStateToProps = state => {
     return {
@@ -17,8 +18,9 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         addComment: (dishId, rating, author, comment) => dispatch({
-            // must be uppercase
-            type: 'ADD_COMMENT',
+            // // must be uppercase
+            // type: 'ADD_COMMENT',
+            type: actionTypes.ADD_COMMENT,
             payload: {
                 dishId: dishId,
                 author: author,

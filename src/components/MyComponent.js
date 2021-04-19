@@ -39,6 +39,15 @@
 //     comments: COMMENTS,
 // }
 
+// if (action.type === 'ADD_COMMENT') {
+//     let comment = action.payload;
+//     comment.id = commentState.length;
+//     comment.date = new Date().toDateString();
+//     console.log(comment);
+//     return commentState.concat(comment);
+// }
+// return commentState;
+
 // export const Reducer = (state = initialState, action) => {
 //     // console.log("From Reducer: ", action);
 //     if (action.type === 'ADD_COMMENT') {
