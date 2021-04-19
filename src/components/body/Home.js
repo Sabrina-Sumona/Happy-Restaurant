@@ -10,10 +10,20 @@ const mapStateToProps = state => {
 }
 
 class Home extends Component {
+
     componentDidMount() {
-        console.log("Home State: ", this.state);
+        // console.log("Home State: ", this.state);
         console.log("Home Props: ", this.props);
+        this.props.dispatch({
+            type: "TEST",
+            str: "Sumona"
+        })
     }
+
+    componentDidUpdate() {
+        console.log("Home Props Updated: ", this.props);
+    }
+
     render() {
         document.title = "Happy Restaurant";
         return (
