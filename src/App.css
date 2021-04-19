@@ -3,12 +3,13 @@
 }
 
 .footer {
-  background-color: #D1C4E9;
+  background-color: #5A6268;
   margin: 0px auto;
   padding-top: 10px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: white;
 }
 
 .row-content {
