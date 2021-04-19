@@ -22,3 +22,11 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.center{
+  Display: flex;
+  Height: 100vh;
+  Width: 100vw; 
+  Align-Items: center;
+  Justify-Content: centre;
+}
