@@ -5,6 +5,7 @@ import { CardColumns, Modal, ModalBody, ModalHeader, Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addComment, fetchDishes, fetchComments, fetchHomescreen } from '../../redux/actionCreators';
 import Loading from './Loading';
+import { Alert } from 'reactstrap';
 
 const mapStateToProps = state => {
     return {
@@ -53,6 +54,11 @@ class Menu extends Component {
         if (this.props.dishes.isLoading) {
             return (
                 <Loading />
+            );
+        }
+        else if (this.props.dishes.errMsg != null) {
+            return (
+                <Alert color="danger">{this.props.dishes.errMsg}</Alert>
             );
         }
         else {

@@ -3,19 +3,28 @@ import * as actionTypes from './actionTypes';
 import { InitialContactForm } from './forms';
 import { createForms } from 'react-redux-form';
 
-const dishReducer = (dishState = { isLoading: false, dishes: [] }, action) => {
+const dishReducer = (dishState = { isLoading: false, dishes: [], errMsg: null }, action) => {
     switch (action.type) {
         case actionTypes.DISHES_LOADING:
             return {
                 ...dishState,
                 isLoading: true,
+                errMsg: null,
                 dishes: []
             }
         case actionTypes.LOAD_DISHES:
             return {
                 ...dishState,
                 isLoading: false,
+                errMsg: null,
                 dishes: action.payload
+            }
+        case actionTypes.DISHES_FAILED:
+            return {
+                ...dishState,
+                isLoading: false,
+                errMsg: action.payload,
+                dishes: []
             }
         default:
             return dishState;
@@ -44,8 +53,7 @@ const commentReducer = (commentState = { isLoading: true, comments: [] }, action
             return {
                 ...commentState,
                 comments: commentState.comments.concat(comment)
-            };
-
+            }
         default:
             return commentState;
     }

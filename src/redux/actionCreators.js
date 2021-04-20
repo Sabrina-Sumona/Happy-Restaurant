@@ -21,11 +21,11 @@ export const commentConcat = (comment) => ({
     payload: comment
 })
 
-export const commentLoading = () => ({
+const commentLoading = () => ({
     type: actionTypes.COMMENT_LOADING
 })
 
-export const loadComments = comments => ({
+const loadComments = comments => ({
     type: actionTypes.LOAD_COMMENTS,
     payload: comments
 })
@@ -38,13 +38,18 @@ export const fetchComments = () => dispatch => {
         .then(comments => dispatch(loadComments(comments)))
 }
 
-export const loadDishes = dishes => ({
+const loadDishes = dishes => ({
     type: actionTypes.LOAD_DISHES,
     payload: dishes
 })
 
-export const dishesloading = () => ({
+const dishesloading = () => ({
     type: actionTypes.DISHES_LOADING
+})
+
+export const dishesFailed = (errMsg) => ({
+    type: actionTypes.DISHES_FAILED,
+    payload: errMsg
 })
 
 export const fetchDishes = () => dispatch => {
@@ -52,4 +57,5 @@ export const fetchDishes = () => dispatch => {
     axios.get(baseUrl + "dishes")
         .then(response => response.data)
         .then(dishes => dispatch(loadDishes(dishes)))
+        .catch(error => dispatch(dishesFailed(error.message)))
 }
