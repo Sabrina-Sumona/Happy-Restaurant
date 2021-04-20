@@ -94,6 +94,8 @@
 // normal redux only support an obj into the dispatch
 // but thunk allows redux to use a dispatch into another dispatch
 
+// import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
+
 // constructor(props) {
 //     super(props);
 //     this.state = {
@@ -130,3 +132,8 @@
 {/* <Input type="checkbox" name="agree" checked={this.state.agree} onChange={this.handleInputChange} /> */ }
 {/* <Input type="select" name="contactType" value={this.state.contactType} onChange={this.handleInputChange} ><option>Tel.</option><option>Email</option></Input> */ }
 {/* <Input type="textarea" name="message" value={this.state.message} rows="12" onChange={this.handleInputChange} ></Input> */ }
+
+// import { LocalForm, Control, Errors } from 'react-redux-form';
+{/* <LocalForm></LocalForm> */ }
+
+// export default Contact;
