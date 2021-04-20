@@ -3,5 +3,3 @@ export const LOAD_DISHES = 'LOAD_DISHES';
 export const DISHES_LOADING = 'DISHES_LOADING';
 export const LOAD_COMMENTS = 'LOAD_COMMENTS';
 export const COMMENT_LOADING = 'COMMENT_LOADING';
-export const LOAD_HOME = 'LOAD_HOME';
-export const HOME_LOADING = 'HOME_LOADING';
