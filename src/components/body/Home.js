@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                 <CardColumns className="hmimg">
-                    <CardImg top src={baseUrl + "images/comingsoon.jpg"} alt={"comingsoon"} />
+                    <CardImg top src={baseUrl + "homescreen.image"} alt={"comingsoon"} />
                 </CardColumns>
             </div>
         );

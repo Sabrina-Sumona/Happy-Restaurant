@@ -171,3 +171,23 @@
 //         })
 //     );
 // }
+
+
+// export const addComment = (dishId, rating, author, comment) => ({
+//     // type: actionTypes.ADD_COMMENT,
+//     // payload: {
+//     //     dishId: dishId,
+//     //     author: author,
+//     //     rating: rating,
+//     //     comment: comment
+//     // }
+// })
+
+// case actionTypes.ADD_COMMENT:
+// // let comment = action.payload;
+// // comment.id = commentState.length;
+// comment.date = new Date().toDateString();
+// //console.log(comment);
+// return commentState.concat(comment);
+//         default:
+// return commentState;
