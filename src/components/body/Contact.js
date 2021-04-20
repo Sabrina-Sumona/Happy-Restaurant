@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Button, FormGroup, Label, Col } from 'reactstrap';
 import { Form, Control, Errors, actions } from 'react-redux-form';
 import { connect } from 'react-redux';
+import axios from 'axios';
+import { baseUrl } from '../../redux/baseUrl';
+import { Alert } from 'reactstrap';
 
 const mapDispatchToProps = dispatch => {
     return {
@@ -17,8 +20,30 @@ const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
 
+    state = {
+        alertShow: false,
+        alertText: null,
+        alertType: null
+    }
+
     handleSubmit = values => {
-        console.log(values);
+        // console.log(values);
+        axios.post(baseUrl + 'feedback', values)
+            .then(response => response.status)
+            .then(status => {
+                if (status === 201) {
+                    this.setState({
+                        alertShow: true,
+                        alertText: "Submitted Successfully",
+                        alertType: "success"
+                    });
+                    setTimeout(() => {
+                        this.setState({
+                            alertShow: false
+                        })
+                    }, 2000)
+                }
+            })
         this.props.resetFeedbackForm();
     }
 
@@ -27,9 +52,12 @@ class Contact extends Component {
         return (
             <div className="container">
                 <div className="row row-content" style={{ paddingLeft: "20px", textAlign: "left" }}>
+
                     <div className="col-12">
                         <h3>Send us your Feedback</h3>
+                        <Alert isOpen={this.state.alertShow} color={this.state.alertType}>{this.state.alertText}</Alert>
                     </div>
+
                     <div className="col-12 col-md-7">
                         <Form model="feedback" onSubmit={values => this.handleSubmit(values)}>
                             <FormGroup row>
