@@ -1,35 +1,12 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, Col } from 'reactstrap';
+import { Button, FormGroup, Label, Col } from 'reactstrap';
 import { LocalForm, Control, Errors } from 'react-redux-form';
 
+const required = val => val && val.length;
+const isNumber = val => !isNaN(Number(val));
+const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+
 class Contact extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         firstname: "",
-    //         lastname: "",
-    //         telnum: "",
-    //         email: "",
-    //         agree: false,
-    //         contactType: 'Tel.',
-    //         message: ""
-    //     }
-    //     this.handleInputChange = this.handleInputChange.bind(this);
-    //     this.handleSubmit = this.handleSubmit.bind(this);
-    // }
-
-    // handleInputChange = event => {
-    //     const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
-    //     const name = event.target.name;
-    //     this.setState({
-    //         [name]: value
-    //     })
-    // }
-
-    // handleSubmit = event => {
-    //     console.log(this.state);
-    //     event.preventDefault();
-    // }
 
     handleSubmit = values => {
         console.log(values);
@@ -45,7 +22,6 @@ class Contact extends Component {
                     </div>
                     <div className="col-12 col-md-7">
                         <LocalForm onSubmit={values => this.handleSubmit(values)}>
-                            {/* <Form onSubmit={this.handleSubmit}> */}
                             <FormGroup row>
                                 <Label htmlFor="firstname" md={2}>First Name</Label>
                                 <Col md={10}>
@@ -54,8 +30,20 @@ class Contact extends Component {
                                         name="firstname"
                                         placeholder="First Name"
                                         className="form-control"
+                                        validators={{
+                                            required
+                                        }}
                                     />
-                                    {/* <Input type="text" name="firstname" placeholder="First Name" value={this.state.firstname} onChange={this.handleInputChange} /> */}
+                                    <Errors
+                                        className="text-danger small"
+                                        model=".firstname"
+                                        show="touched"
+                                        messages={
+                                            {
+                                                required: "Required!"
+                                            }
+                                        }
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -66,8 +54,20 @@ class Contact extends Component {
                                         name="lastname"
                                         placeholder="Last Name"
                                         className="form-control"
+                                        validators={{
+                                            required
+                                        }}
                                     />
-                                    {/* <Input type="text" name="lastname" value={this.state.lastname} placeholder="Last Name" onChange={this.handleInputChange} /> */}
+                                    <Errors
+                                        className="text-danger small"
+                                        model=".lastname"
+                                        show="touched"
+                                        messages={
+                                            {
+                                                required: "Required!"
+                                            }
+                                        }
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -78,8 +78,22 @@ class Contact extends Component {
                                         name="telnum"
                                         placeholder="Tel. Number"
                                         className="form-control"
+                                        validators={{
+                                            required,
+                                            isNumber
+                                        }}
                                     />
-                                    {/* <Input type="tel" name="telnum" value={this.state.telnum} placeholder="Tel. Number" onChange={this.handleInputChange} /> */}
+                                    <Errors
+                                        className="text-danger small"
+                                        model=".telnum"
+                                        show="touched"
+                                        messages={
+                                            {
+                                                required: "Required! ",
+                                                isNumber: "Invalid Number!!"
+                                            }
+                                        }
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -90,8 +104,22 @@ class Contact extends Component {
                                         name="email"
                                         placeholder="Email"
                                         className="form-control"
+                                        validators={{
+                                            required,
+                                            validEmail
+                                        }}
                                     />
-                                    {/* <Input type="email" name="email" value={this.state.email} placeholder="Email" onChange={this.handleInputChange} /> */}
+                                    <Errors
+                                        className="text-danger small"
+                                        model=".email"
+                                        show="touched"
+                                        messages={
+                                            {
+                                                required: "Required! ",
+                                                validEmail: "Invalid Email!!"
+                                            }
+                                        }
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -103,7 +131,6 @@ class Contact extends Component {
                                                 name="agree"
                                                 className="form-check-input"
                                             />
-                                            {/* <Input type="checkbox" name="agree" checked={this.state.agree} onChange={this.handleInputChange} /> */}
                                             <strong>
                                                 May we contact you?
                                             </strong>
@@ -119,11 +146,6 @@ class Contact extends Component {
                                         <option>Tel.</option>
                                         <option>Email</option>
                                     </Control.select>
-                                    {/* <Input type="select" name="contactType"
-                                        value={this.state.contactType} onChange={this.handleInputChange} >
-                                        <option>Tel.</option>
-                                        <option>Email</option>
-                                    </Input> */}
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -134,9 +156,20 @@ class Contact extends Component {
                                         model=".message"
                                         rows="12"
                                         className="form-control"
+                                        validators={{
+                                            required
+                                        }}
                                     />
-                                    {/* <Input type="textarea" name="message" value={this.state.message} rows="12" onChange={this.handleInputChange} >
-                                    </Input> */}
+                                    <Errors
+                                        className="text-danger small"
+                                        model=".message"
+                                        show="touched"
+                                        messages={
+                                            {
+                                                required: "Required!"
+                                            }
+                                        }
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup>
