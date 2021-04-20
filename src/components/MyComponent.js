@@ -137,3 +137,37 @@
 {/* <LocalForm></LocalForm> */ }
 
 // export default Contact;
+
+// https://davidkpiano.github.io/react-redux-form/docs/api/Control.html
+
+// setTimeout(() => {
+//     dispatch(loadDishes(DISHES))
+// }, 500);
+
+// const commentReducer = (commentState = COMMENTS, action) => {
+//     switch (action.type) {
+//         case actionTypes.ADD_COMMENT:
+//             let comment = action.payload;
+//             comment.id = commentState.length;
+//             comment.date = new Date().toDateString();
+//             // console.log(comment);
+//             return commentState.concat(comment);
+//         default:
+//             return commentState;
+//     }
+// }
+
+// const LoadComments = props => {
+//     return (
+//         props.comments.map(comment => {
+//             return (
+//                 <div key={comment.id}>
+//                     <h6>{comment.author}</h6>
+//                     <p>{comment.comment}</p>
+//                     <p>Rating: {comment.rating}</p>
+//                     <p>{dateFormat(comment.date, "dddd, mmmm dS, yyyy, h:MM TT")}</p>
+//                 </div>
+//             );
+//         })
+//     );
+// }

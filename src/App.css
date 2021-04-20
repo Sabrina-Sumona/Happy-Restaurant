@@ -28,7 +28,15 @@
   Height: 100vh;
   Width: 100vw; 
   Align-Items: center;
-  Justify-Content: centre;
+  Justify-Content: center;
+}
+
+.hmimg{
+  Display: flex;
+  Height: 70%;
+  Width: 70%; 
+  margin: auto;
+  padding-top: 10px;
 }
 
 .card-title{
