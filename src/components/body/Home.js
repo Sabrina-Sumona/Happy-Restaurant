@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { baseUrl } from '../../redux/baseUrl';
+import comingsoon from '../../data/comingsoon.jpg';
 import { CardColumns, CardImg } from 'reactstrap';
 
 class Home extends Component {
@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                 <CardColumns className="hmimg">
-                    <CardImg top src={baseUrl + "homescreen.image"} alt={"comingsoon"} />
+                    <CardImg top src={comingsoon} alt={"comingsoon"} />
                 </CardColumns>
             </div>
         );

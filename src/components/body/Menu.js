@@ -3,7 +3,7 @@ import MenuItem from './MenuItem';
 import DishDetail from './DishDetail';
 import { CardColumns, Modal, ModalBody, ModalHeader, Button } from 'reactstrap';
 import { connect } from 'react-redux';
-import { addComment, fetchDishes, fetchComments, fetchHomescreen } from '../../redux/actionCreators';
+import { addComment, fetchDishes, fetchComments } from '../../redux/actionCreators';
 import Loading from './Loading';
 import { Alert } from 'reactstrap';
 
